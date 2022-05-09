@@ -1,5 +1,35 @@
 # ESPHome PC Power Control via Home Assistant
 
+## Customised
+This is a customised version of the [ESPHome Power control](https://github.com/Erriez/ESPHomePCPowerControlHomeAssistant) by [Erriez](https://github.com/Erriez/) with some minor changes listed below:-
+* ESP
+  * Updated board configuration for ESP32S by nodemcu
+  * Added Webserver and API
+  * Added static IP settings
+* Simple Android application
+  * Sends API requests to toggle power/force shutdown
+  * Shows connection status to ESP and also PC power status
+* Hardware
+ * Changed Transistor from BC547 to S9014 as it's what I had on hand
+ * Changed monitored reset pin on motherboard header to an addressable LED header as my motherboard (AsRock H570) put out a consistent 3.3v regardless of power status
+
+Motherboard:
+
+<img src="images/motherboard.jpg" width="400" height="400" /><br>
+
+ESP:
+
+<img src="images/esp.jpg" width="400" height="400" /><br>
+
+Webserver:
+
+<img src="images/webserver.png" width="600" height="400" /><br>
+
+Android:
+
+<img src="images/android.png" width="200" height="400" /><br>
+
+
 This project contains remote PC power control via HomeAssistant and ESPHome ESP8266/ESP32 boards.
 
 I use this project to power my PC based NAS remotely on and off via Home Assistant as alternative to Wake-On-Lan (WOL) which has known limitations.

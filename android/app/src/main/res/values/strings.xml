@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Globals -->
+    <string name="app_name">Server Power Controller</string>
+    <string name="short_app_name">Server Power Controller</string>
+
+    <string name="activity_button">Button</string>
+    <string name="activity_configuration">Configuration</string>
+
+    <string name="device_connection">Connection</string>
+    <string name="server_connection">Power Status</string>
+
+    <string name="ok">OK</string>
+
+    <string name="invalid_hostname">Error: \"%1$s\" invalid hostname.</string>
+
+    <!-- Icon and Images -->
+    <string name="alt_information">Information</string>
+    <string name="alt_wifi">Wifi</string>
+    <string name="alt_configuration">Configuration</string>
+
+    <!-- Configuration -->
+    <string name="configuration_server">Server</string>
+
+    <string name="address_ip_title">IP Address</string>
+    <string name="address_ip_dialog_title">IP Address</string>
+    <string name="address_ip_dialog_message">Enter the IP Address of your server</string>
+
+    <string name="port_title">Port</string>
+    <string name="port_dialog_title">Port</string>
+    <string name="port_dialog_message">Enter the port of your server</string>
+
+    <string name="configuration_authentication">Authentication</string>
+
+    <string name="username_title">Username</string>
+    <string name="username_dialog_title">Username</string>
+    <string name="username_dialog_message">Enter the username for your server</string>
+
+    <string name="password_title">Password</string>
+    <string name="password_dialog_title">Password</string>
+    <string name="password_dialog_message">Enter the password of your server</string>
+
+    <!-- Information - Dialog -->
+    <string name="configuration_dialog_title">Information</string>
+    <string name="configuration_dialog_message">The source code of this application is  available on github:\n\nhttps://github.com/kingmercian/</string>
+
+</resources>

@@ -1,0 +1,74 @@
+esphome:
+  project:
+    name: "kingmercian.server-power-control"
+    version: "1.0.0"
+  name: server-power
+  platform: ESP32 # ESP8266 or ESP32
+  board: nodemcu-32s #esp32doit-espduino  # https://docs.platformio.org/en/latest/platforms/espressif32.html#boards
+
+# WiFi connection to base station
+wifi:
+  ssid: !secret esphome_wifi_ssid
+  password: !secret esphome_wifi_password
+  fast_connect: true
+  reboot_timeout: 5min
+  manual_ip:
+    static_ip: 192.168.1.99
+    gateway: 192.168.1.1
+    subnet: 255.255.255.0
+
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "PC Power Fallback Hotspot"
+    password: !secret esphome_ap_ota_password
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  port: 6053
+  reboot_timeout: 0s
+  password: !secret esphome_ha_api_password
+
+# Enable OTA update via WiFi
+ota:
+  password: !secret esphome_ap_ota_password
+
+switch:
+  - platform: gpio
+    name: "PC Power Toggle"
+    icon: "mdi:electric-switch"
+    pin: GPIO21   # Power button output pin
+    id: power_short_press
+    inverted: no
+    on_turn_on:
+    - delay: 150ms
+    - switch.turn_off: power_short_press
+
+  - platform: gpio
+    name: "PC Force Shutdown"
+    icon: "mdi:electric-switch"
+    pin: GPIO21   # Power button output pin
+    id: power_long_press
+    inverted: no
+    on_turn_on:
+    - delay: 3500ms
+    - switch.turn_off: power_long_press
+
+binary_sensor:
+  - platform: gpio
+    pin: GPIO22   # Power detect input pin (readback from Reset button)
+    name: "PC Power State"
+    id: binary_power_state
+    device_class: power
+
+web_server:
+  port: 80
+  ota: true
+  local: true
+  version: 2
+  auth:
+    username: !secret esphome_webserver_username
+    password: !secret esphome_webserver_password

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="@string/configuration_server"
+        app:iconSpaceReserved="false">
+
+        <EditTextPreference
+            android:dialogMessage="@string/address_ip_dialog_message"
+            android:dialogTitle="@string/address_ip_dialog_title"
+            android:inputType="text"
+            android:key="ip_address"
+            android:title="@string/address_ip_title"
+            app:iconSpaceReserved="false" />
+
+        <EditTextPreference
+            android:dialogMessage="@string/port_dialog_message"
+            android:dialogTitle="@string/port_dialog_title"
+            android:inputType="text"
+            android:key="port"
+            android:title="@string/port_title"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/configuration_authentication"
+        app:iconSpaceReserved="false">
+
+        <EditTextPreference
+            android:dialogMessage="@string/username_dialog_message"
+            android:dialogTitle="@string/username_dialog_title"
+            android:inputType="text"
+            android:key="username"
+            android:title="@string/username_title"
+            app:iconSpaceReserved="false" />
+
+        <EditTextPreference
+            android:dialogMessage="@string/password_dialog_message"
+            android:dialogTitle="@string/password_dialog_title"
+            android:key="password"
+            android:title="@string/password_title"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
