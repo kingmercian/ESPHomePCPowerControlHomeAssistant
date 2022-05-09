@@ -23,6 +23,9 @@ wifi:
     ssid: "PC Power Fallback Hotspot"
     password: !secret esphome_ap_ota_password
 
+# Enable captive portal
+captive_portal:
+
 # Enable logging
 logger:
 
