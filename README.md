@@ -10,8 +10,8 @@ This is a customised version of the [ESPHome Power control](https://github.com/E
   * Sends API requests to toggle power/force shutdown
   * Shows connection status to ESP and also PC power status
 * Hardware
- * Changed Transistor from BC547 to S9014 as it's what I had on hand
- * Changed monitored reset pin on motherboard header to an addressable LED header as my motherboard (AsRock H570) put out a consistent 3.3v regardless of power status
+  * Changed Transistor from BC547 to S9014 as it's what I had on hand
+  * Changed monitored reset pin on motherboard header to an addressable LED header as my motherboard (AsRock H570) put out a consistent 3.3v on reset pin regardless of power status
 
 Motherboard:
 
